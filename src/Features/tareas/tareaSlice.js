@@ -1,5 +1,5 @@
-import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
-import tareaService from "./tareaService";
+import { createSlice, createAsyncThunk } from '@reduxjs/toolkit'
+import tareaService from './tareaService'
 
 const initialState = {
     tareas: [],
@@ -41,7 +41,6 @@ export const deleteTarea = createAsyncThunk('tareas/delete', async (id, thunkAPI
         return thunkAPI.rejectWithValue(message)
     }
 })
-
 
 export const tareaSlice = createSlice({
     name: 'tarea',
@@ -88,7 +87,7 @@ export const tareaSlice = createSlice({
             .addCase(deleteTarea.rejected, (state, action) => {
                 state.isLoading = false
                 state.isError = true
-                state.message = action.payload 
+                state.message = action.payload
             })
     }
 })

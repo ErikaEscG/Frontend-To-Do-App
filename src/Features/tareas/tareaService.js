@@ -26,6 +26,7 @@ const getTareas = async (token) => {
 
     return response.data
 }
+
 //Delete Tarea
 const deleteTarea = async (id, token) => {
     const config = {
